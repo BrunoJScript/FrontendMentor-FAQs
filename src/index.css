@@ -1,0 +1,90 @@
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Work Sans";
+}
+
+body {
+  display: flex;
+  background-color: var(--Purple-100);
+  background-image: url(./assets/background-pattern-desktop.svg);
+  background-repeat: no-repeat;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+body #root {
+  display: flex;
+  justify-content: center;
+}
+
+:root {
+  --White: hsl(0, 100%, 100%);
+  --Purple-100: hsl(275, 100%, 97%);
+  --Purple-600: hsl(292, 16%, 49%);
+  --Purple-950: hsl(292, 42%, 14%);
+}
+
+.container {
+  background-color: var(--White);
+  width: 550px;
+  padding: 2rem;
+
+  border-radius: 8px;
+  box-shadow: 0px 0px 28px -8px var(--Purple-600);
+  transition: all 0.3s;
+
+  & .container-header {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+
+    h1 {
+      color: var(--Purple-950);
+      font-size: 2.8rem;
+    }
+
+    img {
+      width: 30px;
+    }
+  }
+
+  & .faq-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+}
+
+button {
+  all: unset;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  color: var(--Purple-950);
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+button:hover {
+  color: var(--Purple-600);
+}
+
+p {
+  padding: 1rem 0;
+  color: var(--Purple-600);
+  font-size: 16px;
+  line-height: 20px;
+}
+
+@media (max-width: 565px) {
+  .container {
+    width: 90%;
+  }
+}
